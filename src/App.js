@@ -1,25 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import Header from "./components/Header";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import MainContainer from "./components/HomeContainer";
+import CreateContainer from "./components/CreateContainer";
+import { AnimatePresence } from "framer-motion";
+import { useStateValue } from "./context/StateProvider";
+import { getAllFoodItems } from "./firebaseFunctions";
+import { actionType } from "./context/reducer";
+import MenuContainer from "./components/MenuContainer";
+import CartContainer from "./components/CartContainer";
 
-function App() {
+const App = () => {
+  const [{ foodItems }, dispatch] = useStateValue();
+
+  const fetchData = async () => {
+    await getAllFoodItems().then((data) => {
+      console.log(data);
+      console.log(foodItems, "77");
+      dispatch({
+        type: actionType.SET_FOOD_ITEMS,
+        foodItems: data,
+      });
+    });
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AnimatePresence>
+      <Router>
+        <div className="w-screen h-auto flex flex-col">
+          <Header />
+        </div>
+        <main className=" mt-14 md:mt-20 px-4 md:px-16 py-6 w-full bg-main">
+          <Routes>
+            <Route exact path="/" element={<MainContainer />} />
+            <Route exact path="/createItem" element={<CreateContainer />} />
+            <Route exact path="/menu" element={<MenuContainer />} />
+            <Route exact path="/cart-container" element={<CartContainer />} />
+          </Routes>
+        </main>
+      </Router>
+      {/*  <MenuContainer /> */}
+    </AnimatePresence>
   );
-}
+};
 
 export default App;
