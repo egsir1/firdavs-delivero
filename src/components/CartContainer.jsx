@@ -8,6 +8,7 @@ import { useStateValue } from "../context/StateProvider";
 import cartImg from "../img/empty-cart.png";
 import CartItem from "./CartItem";
 import { actionType } from "../context/reducer";
+import "./CartContainer.css";
 
 const CartContainer = () => {
   const [{ cartItems, user }, dispatch] = useStateValue();
@@ -33,8 +34,8 @@ const CartContainer = () => {
   };
 
   return (
-    <div className=" w-100rem] h-[30rem]">
-      <div className="w-[23rem] mt-2   py-2 px-2 md:w-375 h-[50rem] bg-main drop-shadow-md flex flex-col">
+    <div className=" cartContainer w-100rem] h-[30rem]">
+      <div className="w-[23rem] mt-2 cartItems  py-2 px-2 md:w-375 h-[50rem] bg-main drop-shadow-md flex flex-col">
         <div className="w-full flex items-center justify-between p-4 cursor-pointer">
           <motion.div whileTap={{ scale: 0.75 }}>
             <Link to="/menu">

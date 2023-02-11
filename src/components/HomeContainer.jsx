@@ -44,7 +44,7 @@ const HomeContainer = () => {
               />
             </div>
           </div>
-          <p className="text-[2rem] lg:text-[3.5rem]  md:text-left font-bold tracking-wide text-white">
+          <p className="text-[2rem] homeRes  lg:text-[3.5rem] sm:text-center md:text-left font-bold tracking-wide text-white">
             The Fastest Halal Delivery in{" "}
             <span className="text-[2rem] lg:text-[3.5rem] text-amber">
               Jeonju

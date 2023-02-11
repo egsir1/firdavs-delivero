@@ -60,7 +60,7 @@ const Header = () => {
             <p className="text-amber  text-xl font-bold">Firdavs delivero</p>
           </Link>
         </div>
-        <div className="google-t" id="google_translate_element"></div>
+
         <ul className="flex items-center gap-8 ml-auto">
           <div
             style={{

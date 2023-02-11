@@ -40,12 +40,19 @@ body {
 .goog-te-banner-frame {
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   .google-t {
-    background-color: red;
-    width: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 4rem;
   }
+
   .goog-logo-link {
     display: block;
+  }
+  .homeRes {
+    text-align: center;
   }
 }
