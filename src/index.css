@@ -19,7 +19,7 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.google-t {
+/* .google-t {
   margin-top: 1rem;
   margin-left: 5rem;
 }
@@ -55,4 +55,4 @@ body {
   .homeRes {
     text-align: center;
   }
-}
+} */
