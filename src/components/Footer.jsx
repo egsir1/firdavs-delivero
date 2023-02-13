@@ -55,7 +55,7 @@ const Footer = () => {
       </div>
       <div className={classes.copyRight}>
         <h3>©{year} Firdavs. All rights reserved</h3>
-        <div className="google-t" id="google_translate_element"></div>
+        {/* <div className="google-t" id="google_translate_element"></div> */}
       </div>
     </>
   );
