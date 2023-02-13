@@ -56,6 +56,7 @@ module.exports = {
         hex: "#03162e",
         darkGreen: "#137029",
         amber2: "#027d29",
+        head: "#111222",
       },
     },
   },

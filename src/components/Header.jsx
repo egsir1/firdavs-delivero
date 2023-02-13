@@ -46,9 +46,9 @@ const Header = () => {
     });
   };
   return (
-    <div className="fixed z-50 w-screen bg-hex p-6 px-6 md:p-6 md:px-16 h-20">
+    <div className=" z-50 w-screen  bg-hex p-6 px-6 md:p-6 md:px-16 h-20">
       {/*desktop*/}
-      <div className="hidden md:flex w-full h-full items-center">
+      <div className="hidden md:flex w-full h-full  items-center">
         <div className="flex items-center gap-2">
           {/*  <img
             src={Logo}
